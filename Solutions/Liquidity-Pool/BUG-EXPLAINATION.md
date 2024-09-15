@@ -34,7 +34,7 @@ So, users deposit a specified asset and, in return, they get minted the LP token
 - The deposit amount must be greater than zero.
 - The LP tokens minted to the user are 2x the base amount deposited.
   
-PPWithdraw Functionality**
+**Withdraw Functionality**
 Now, let’s move on to the second functionality of the contract: the withdraw function. This function allows users to retrieve their base asset by providing the LP token. Sounds cool, right?
 
 But here’s something to keep in mind: in Fuel, assets (or tokens) are handled a bit differently. There’s no explicit `transfer()` function for tokens—assets are treated as native assets by the blockchain.
