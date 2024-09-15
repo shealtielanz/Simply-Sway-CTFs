@@ -143,7 +143,7 @@ pub fn get_default_asset_id(contract: ContractId) -> AssetId {
 
 
 #[tokio::test]
-async fn can_get_contract_id() {
+async fn test_exploit() {
     // firstly we lauch provider, wallets, and the liquidity_pool instance
     let (liquidity_pool_instance, 
         wallet_user,
