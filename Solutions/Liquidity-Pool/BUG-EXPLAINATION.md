@@ -35,6 +35,9 @@ So, users deposit a specified asset and, in return, they get minted the LP token
 - The LP tokens minted to the user are 2x the base amount deposited.
   
 **Withdraw Functionality**
+
+
+
 Now, let’s move on to the second functionality of the contract: the withdraw function. This function allows users to retrieve their base asset by providing the LP token. Sounds cool, right?
 
 But here’s something to keep in mind: in Fuel, assets (or tokens) are handled a bit differently. There’s no explicit `transfer()` function for tokens—assets are treated as native assets by the blockchain.
@@ -63,14 +66,20 @@ Now, are you sure your bug is correct? Or did you make a mistake? How could you 
 
 There’s no constraint on the `token/asset` sent via the call. That’s it. If you don’t see the issue yet, let me explain.
 
-In the `withdraw()` function, the contract checks the amount it receives in the call but doesn’t validate the type of asset sent. This means anyone can send any token to the function and withdraw all the base assets from the pool. Here's how it works:
+In the `withdraw()` function, the contract checks the amount it receives in the call but doesn’t validate the type of asset sent. This means anyone can send any token to the function and withdraw all the base assets from the pool.
+**Here's how it works:**
+
 
 - Imagine our classic "Bob" deposits **1,000,000 USDC** (assuming USDC is the base asset). The contract mints **2,000,000 LP tokens** for Bob.
 - When Bob calls `withdraw()` with **2,000,000 LP tokens**, the contract transfers **1,000,000 USDC** back to him. Great! This is the expected behavior.
-  
+
+
+
 **Now, here’s the problem:**
 
-- Alice notices the bug: there’s no validation on the asset_id sent with the withdraw() call.
+
+
+- Alice notices the bug: there’s no validation on the `asset_id` sent with the `withdraw()` call.
 - After Bob deposits **1,000,000 USDC**, Alice could mint herself **2,000,000** units of a completely useless token.
 - She then calls `withdraw()` with that useless token instead of the actual **LP token** of the contract, and the contract will still give her **1,000,000 USDC**, effectively draining Bob's deposit from the contract.
 - 
