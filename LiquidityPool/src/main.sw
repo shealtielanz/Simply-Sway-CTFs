@@ -1,5 +1,7 @@
 contract;
- 
+/*
+Exploit this contract bby ;)
+*/
 use std::{
     asset::{
         mint_to,
