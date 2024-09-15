@@ -102,7 +102,7 @@ Balance of lptoken for the user before calling deposit: 0
 Balance of lptoken after the call to deposit into pool: 2000000
 Balance of the attacker  before  the call to exploit withdraw(): 2000000
 Balance of the attacker  after the exploit: 3000000
-test can_get_contract_id ... ok
+test test_exploit ... ok
 
 ```
 
