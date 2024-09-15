@@ -18,6 +18,9 @@ The solution and tests can be found in the solutions folder, including:
 - How the exploit is constructed and tested.
 This CTF will help you build muscle memory for writing exploits for Sway contracts and navigate the Rust errors that often pop up when testing them.
 
+## NOTE
+Before starting, make sure to read the `README.md` files in the necessary folders for each challenge to help you gain context.
+
 ## Feedback
 This is my first attempt at creating something like this. If you enjoyed the challenge or found it helpful, please drop a review or post on Twitter and tag me [@shealtileanz](https://x.com/shealtielanz).
 
