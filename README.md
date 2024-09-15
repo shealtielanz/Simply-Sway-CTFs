@@ -9,7 +9,7 @@ This CTF presents a straightforward bug to find, but the real challenge lies in 
 - Familiarity with the [Fuel Rust SDK for Testing](https://docs.fuel.network/docs/fuels-rs/): Essential for writing and understanding tests on Fuel.
 
 ## The Challenge
-The target contract for this challenge is based on the [Fuel docs](https://docs.fuel.network/docs/)– specifically, the liquidity pool contract, where users can deposit and withdraw assets. While the bug is relatively simple for someone familiar with Fuel, your task is to exploit it by stealing the base asset deposited by an honest user.
+The target contract for this challenge is based on the [Fuel docs](https://docs.fuel.network/docs/)– specifically, the [liquidity pool contract](https://docs.fuel.network/docs/fuels-rs/cookbook/deposit-and-withdraw/), where users can deposit and withdraw assets. While the bug is relatively simple for someone familiar with Fuel, your task is to exploit it by stealing the base asset deposited by an honest user.
 
 ## Solution & Testing
 The solution and tests can be found in the solutions folder, including:
