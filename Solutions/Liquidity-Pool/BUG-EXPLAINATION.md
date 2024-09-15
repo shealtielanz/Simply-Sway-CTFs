@@ -78,6 +78,24 @@ In the `withdraw()` function, the contract checks the amount it receives in the 
 For the coded exploit, we use Rust to simulate this scenario where a user deposits a certain amount of the base asset, and an attacker comes along and uses a useless token to withdraw all the base assets from the pool.
 
 Check the `harness.rs` file where you’ll find detailed comments explaining how to write the exploit.
+Use this command line to run the test and printout the logs.
+```bash
+cargo test -- --nocapture
+```
+
+After the test is done you can see the output that the exploit is possible.
+
+
+```bash
+running 1 test
+Balance of user for the base-asset: 2000000
+Balance of lptoken for the user before calling deposit: 0
+Balance of lptoken after the call to deposit into pool: 2000000
+Balance of the attacker  before  the call to exploit withdraw(): 2000000
+Balance of the attacker  after the exploit: 3000000
+test can_get_contract_id ... ok
+
+```
 
 To ensure it works, simply copy and paste the code into your VSCode. Be sure to:
 
