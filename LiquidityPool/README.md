@@ -46,6 +46,22 @@ forc init --path liquidity-pool-exploit
 cd liquidity-pool-exploit
 ```
 
+**NOTE**
+
+If you already have `fuelup` installed, run the commands below to make sure you are on the most up-to-date toolchain.
+you can check the version you're currently on via:
+
+```bash
+fuelup --version
+```
+And update via:
+
+```bash
+fuelup self update
+fuelup update
+fuelup default latest
+```
+
 4) Complete the Challenge
    
 **To complete the challenge, follow these steps:**
