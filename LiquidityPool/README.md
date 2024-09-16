@@ -59,7 +59,9 @@ Submit your solution, proving that you've exploited the vulnerability.
 
 ```sway
 contract;
- 
+/*
+Exploit this contract bby ;)
+*/
 use std::{
     asset::{
         mint_to,
@@ -99,13 +101,12 @@ impl LiquidityPool for Contract {
         assert(0 < msg_amount());
  
         // Amount to withdraw.
-        let amount to transfer = msg_amount() / 2;
+        let amount_to_transfer = msg_amount() / 2;
  
         // Transfer base token to recipient.
         transfer(recipient, BASE_TOKEN, amount_to_transfer);
     }
 }
-
 ```
 
 
