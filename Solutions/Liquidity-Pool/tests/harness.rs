@@ -18,7 +18,7 @@ to interact with the contract using rust easily. read more here -> https://docs.
 
 abigen!(Contract(
     name = "LiquidityPool",
-    abi = "out/debug/liquidity-pool-abi.json"
+    abi = "out/debug/liquidity-pool-exploit-abi.json"
 ));
 
 /*
@@ -88,7 +88,7 @@ async fn get_contract_instance() -> (LiquidityPool<WalletUnlocked>, WalletUnlock
        deploy the contract here 
     */
     let contract_id = Contract::load_from(
-        "out/debug/liquidity-pool.bin",
+        "out/debug/liquidity-pool-exploit.bin",
         LoadConfiguration::default(),
     ).unwrap()
     .deploy(wallet, TxPolicies::default())
