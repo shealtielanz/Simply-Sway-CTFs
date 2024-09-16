@@ -82,7 +82,7 @@ In the `withdraw()` function, the contract checks the amount it receives in the 
 - Alice notices the bug: there’s no validation on the `asset_id` sent with the `withdraw()` call.
 - After Bob deposits **1,000,000 USDC**, Alice could mint herself **2,000,000** units of a completely useless token.
 - She then calls `withdraw()` with that useless token instead of the actual **LP token** of the contract, and the contract will still give her **1,000,000 USDC**, effectively draining Bob's deposit from the contract.
-- 
+
 ## Coded Exploit
 For the coded exploit, we use Rust to simulate this scenario where a user deposits a certain amount of the base asset, and an attacker comes along and uses a useless token to withdraw all the base assets from the pool.
 
