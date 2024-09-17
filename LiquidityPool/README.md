@@ -152,7 +152,7 @@ cargo generate --init fuellabs/sway templates/sway-test-rs --name liquidity-pool
 
 4) Prepare Your Test Environment
    
-After setting up, you can clear the harness.rs file and use it to launch your provider and wallets. Follow the steps outlined in the [Fuel Docs under the section](https://docs.fuel.network/docs/fuels-rs/cookbook/deposit-and-withdraw/) for testing pool deposits and withdrawals.
+After setting up, you can clear the `harness.rs` file and use it to launch your provider and wallets. Follow the steps outlined in the [Fuel Docs under the section](https://docs.fuel.network/docs/fuels-rs/cookbook/deposit-and-withdraw/) for testing pool deposits and withdrawals.
 
 **Notes**
 For reference, use the [Fuel Docs](https://docs.fuel.network/docs/fuels-rs/cookbook/deposit-and-withdraw/) to help you get started with writing the tests for the liquidity pool.
