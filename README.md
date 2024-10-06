@@ -25,6 +25,6 @@ Before starting, make sure to read the `README.md` files in the necessary folder
 This is my first attempt at creating something like this. If you enjoyed the challenge or found it helpful, please drop a review or post on Twitter and tag me [@shealtileanz](https://x.com/shealtielanz).
 
 
-> I used ChatGPT to give a more readable ReadMe.
+> I used ChatGPT to give a more readable and concise ReadMe.
 
 Enjoy :)
